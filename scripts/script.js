@@ -10,7 +10,7 @@ numbers.forEach((number) => {
 })
 
 function addNumber(evt) {
-    if (+(inputScreen.textContent) === 0) {
+    if ((inputScreen.textContent) == "0") {
         inputScreen.textContent = "";
     }
     if (inputScreen.textContent.length < 20) {
@@ -32,6 +32,10 @@ decimal.addEventListener('click', (evt) => {
 function decimalPoint() {
     //< 19 so it's not the last char added
     if (!(inputScreen.textContent.includes('.')) && inputScreen.textContent.length < 19) {
+        if (inputScreen.textContent.length === 0) {
+            inputScreen.textContent += "0";
+        }
         inputScreen.textContent += '.';
     }
 }
+

@@ -71,6 +71,7 @@ body {
 .row {
     display: flex;
     justify-content: space-around;
+    width: 100%;
     gap: 10px;
 }
 
@@ -90,6 +91,10 @@ button {
     background-color: #101010;
     color: white;
     border: 3px solid black;
+}
+
+#backspace{
+    padding: 24px;
 }
 
 button:active {
