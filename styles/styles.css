@@ -92,6 +92,20 @@ button {
     border: 3px solid black;
 }
 
+button:active {
+    /* box-shadow: 3px 3px 5px 6px #ccc; */
+    box-shadow: inset 0 0 10px #f8a100;
+    /* https://css-tricks.com/snippets/css/css-box-shadow/ */
+}
+
 .operator {
     background-color: #3c1414;
+}
+
+.number:hover {
+    background-color: #202020;
+}
+
+.operator:hover {
+    background-color: #592720;
 }
