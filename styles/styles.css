@@ -10,6 +10,7 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
+    background-color: #282828;
 }
 
 #calculator {
@@ -79,10 +80,11 @@ button {
     padding: 30px;
     border-radius: 10px;
     cursor: pointer;
-    background-color: rgba(119, 136, 153, 0.634);
+    background-color: #101010;
+    color: white;
     border: 3px solid black;
 }
 
 .operator {
-    background-color: lightgray;
+    background-color: #3c1414;
 }
