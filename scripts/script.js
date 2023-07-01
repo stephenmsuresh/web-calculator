@@ -104,7 +104,7 @@ decimal.addEventListener('click', (evt) => {
 
 function decimalPoint() {
     //< 19 so it's not the last char added
-    if (!(inputScreen.textContent.includes('.')) && inputScreen.textContent.length < 19) {
+    if (!(inputScreen.textContent.includes('.')) && inputScreen.textContent.length < MAX_INPUT_LENGTH) {
         if (inputScreen.textContent.length === 0) {
             inputScreen.textContent += "0";
         }
