@@ -1,3 +1,6 @@
+//to do: format output
+const MAX_OUTPUT_LENGTH = 15;
+
 const inputScreen = document.querySelector('#input-screen');
 const outputScreen = document.querySelector('#output-screen');
 const numbers = document.querySelectorAll('.number');
@@ -21,7 +24,7 @@ document.querySelector('#equals').addEventListener('click', (evt) => {
         calculate(operator);
     }
     else if ((inputScreen.innerText) != "0") {
-        outputScreen.textContent = inputScreen.textContent;
+        outputScreen.textContent = formatOutput(inputScreen.textContent);
         inputScreen.innerText = "0";
     }
 })
@@ -43,7 +46,7 @@ function handleOperator(evt) {
         calculate(operator);
     }
     else if (outputScreen.textContent === "") {
-        outputScreen.textContent = inputScreen.textContent;
+        outputScreen.textContent = formatOutput(inputScreen.textContent);
     }
     else {
 
@@ -72,7 +75,7 @@ function calculate(mathOperation) {
         outputScreen.textContent = "ERROR";
     }
     else {
-        outputScreen.textContent = result;
+        outputScreen.textContent = formatOutput(result);
     }
     // (result === NaN) ? (outputScreen.textContent = result) : (outputScreen.textContent = "ERROR");
     inputScreen.textContent = "0";
@@ -111,7 +114,18 @@ document.querySelector('#backspace').addEventListener('click', (evt) => {
 })
 
 function formatOutput(output) {
-    if (output.length >= 16) {
-        //16 is max length before it screen expands and calculator becomes bigger
+    let num = output.toString();
+    console.log(num);
+    console.log(num.length)
+    if (num.length > MAX_OUTPUT_LENGTH) {
+        num = (exponent(output).toString());
+        while (num.length > MAX_OUTPUT_LENGTH) {
+            num = num.slice(0, (num.indexOf('e') - 1)) + num.slice(num.indexOf('e'))
+        }
     }
+    return num;
+}
+
+function exponent(x, f) {
+    return Number.parseFloat(x).toExponential(f);
 }
