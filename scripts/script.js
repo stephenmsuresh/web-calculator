@@ -1,7 +1,3 @@
-//todo: 
-//add keyboard support
-//js30 video on drumkit
-
 //future improvements:
 //exponent button
 
