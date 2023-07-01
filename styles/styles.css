@@ -27,7 +27,6 @@ body {
 
 /* screens */
 #screen {
-    width: auto;
     height: 175px;
     background-color: greenyellow;
     border-radius: 10px;
@@ -42,18 +41,18 @@ body {
     margin: 10px;
 }
 
-#screen-row-1,
-#screen-row-2 {
+#output-screen,
+#input-screen {
     width: 95%;
     height: 50%;
     text-align: right;
 }
 
-#screen-row-1 {
-    font-size: 50px;
+#output-screen {
+    font-size: 40px;
 }
 
-#screen-row-2 {
+#input-screen {
     font-size: 30px;
 }
 
@@ -75,10 +74,6 @@ body {
     gap: 10px;
 }
 
-.row-1 {
-    width: 100%;
-}
-
 #clear {
     width: 75%;
 }
@@ -93,7 +88,7 @@ button {
     border: 3px solid black;
 }
 
-#backspace{
+#backspace {
     padding: 24px;
 }
 
@@ -103,14 +98,22 @@ button:active {
     /* https://css-tricks.com/snippets/css/css-box-shadow/ */
 }
 
-.operator {
+.operator,
+#backspace,
+#dot,
+#equals,
+#clear {
     background-color: #3c1414;
+}
+
+.operator:hover,
+#backspace:hover,
+#dot:hover,
+#equals:hover,
+#clear:hover {
+    background-color: #592720;
 }
 
 .number:hover {
     background-color: #202020;
-}
-
-.operator:hover {
-    background-color: #592720;
 }
