@@ -1,7 +1,10 @@
 //future improvements:
 //exponent button
+//easier negative number implementation
+//store last number and operation
 
 const MAX_OUTPUT_LENGTH = 15;
+const MAX_INPUT_LENGTH = 19;
 
 const inputScreen = document.querySelector('#input-screen');
 const outputScreen = document.querySelector('#output-screen');
@@ -39,7 +42,7 @@ function inputNumber(evt) {
     if (outputScreen.textContent.length > 0 && operator === '') {
         outputScreen.textContent = "";
     }
-    if (inputScreen.textContent.length < 20) {
+    if (inputScreen.textContent.length < MAX_INPUT_LENGTH) {
         let num = (evt.type === 'click' ? (evt.target.innerText) : (evt.key))
         inputScreen.textContent += num;
     }
