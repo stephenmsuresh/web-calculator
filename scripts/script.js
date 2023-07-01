@@ -1,8 +1,3 @@
-//future improvements:
-//exponent button
-//easier negative number implementation
-//store last number and operation
-
 const MAX_OUTPUT_LENGTH = 15;
 const MAX_INPUT_LENGTH = 19;
 
